@@ -5,7 +5,7 @@ project repo for second semester
 
 1. Clone the Repository:
 Clone the remote repository to your local machine. This creates a local copy of the repository where you can work on your changes.
-Command: git clone https://github.com/<your-username>/<your-repo>.git
+Command: git clone https://github.com/your-username/your-repo.git
 
 2. Create Your Own Branch Locally:
 Create a new branch for your feature and switch to it. This helps avoid working directly on the master branch.
