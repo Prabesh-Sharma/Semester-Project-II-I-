@@ -2,6 +2,7 @@
 project repo for second semester
 
 =>Initializing
+
 1. Clone the Repository:
 Clone the remote repository to your local machine. This creates a local copy of the repository where you can work on your changes.
 Command: git clone https://github.com/<your-username>/<your-repo>.git
@@ -27,6 +28,7 @@ Push your committed changes to the remote branch. This shares your changes with 
 Command: git push
 
 =>Syncing
+
 7. Switch to Your Feature Branch:
 If you’re not already on your feature branch, switch to it. This ensures that you’re working on the correct branch.
 Command: git checkout <your-branch-name>
@@ -45,6 +47,7 @@ After syncing, push your updated branch back to the remote repository. If you us
 Command: git push (or git push --force if rebased)
 
 =>Merging
+
 10. Switch to the Master Branch:
 Use this command to switch to the master branch, where you want to merge your changes.
 Command: git checkout master
@@ -62,6 +65,7 @@ After merging, you need to push the updated master branch back to the remote rep
 Command: git push origin master
 
 =>Deleting
+
 14.Delete the Branch from the Remote:
 If your feature branch is no longer needed, you can delete it from the remote repository.
 Command: git push origin --delete <your-branch-name>
