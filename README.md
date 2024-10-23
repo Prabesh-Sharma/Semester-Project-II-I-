@@ -1,18 +1,19 @@
 # Semester-Project-II-I-
 project repo for second semester
 
---------------Initializing-----------------
+=>Initializing
+
 1. Clone the Repository:
 Clone the remote repository to your local machine. This creates a local copy of the repository where you can work on your changes.
 Command: git clone https://github.com/<your-username>/<your-repo>.git
 
 2. Create Your Own Branch Locally:
 Create a new branch for your feature and switch to it. This helps avoid working directly on the master branch.
-Command: git checkout -b <your-branch-name>
+Command: git checkout -b your-branch-name
 
 3. Add the Branch to the Remote Repository:
 Push your newly created branch to the remote repository and set up tracking. This allows you to easily push and pull changes to and from this branch in the future.
-Command: git push -u origin <your-branch-name>
+Command: git push -u origin your-branch-name
 
 4. Make Changes and Stage Them:
 After making your changes, stage them for commit. This prepares your changes to be included in the next commit.
@@ -26,10 +27,11 @@ Command: git commit -m "Your commit message"
 Push your committed changes to the remote branch. This shares your changes with the team.
 Command: git push
 
------------------Syncing---------------------
+=>Syncing
+
 7. Switch to Your Feature Branch:
 If you’re not already on your feature branch, switch to it. This ensures that you’re working on the correct branch.
-Command: git checkout <your-branch-name>
+Command: git checkout your-branch-name
 
 8. Fetch the Latest Changes from the Remote:
 Fetch updates from the remote repository. This downloads the latest changes without merging them into your current branch.
@@ -44,7 +46,8 @@ Push Your Updated Feature Branch:
 After syncing, push your updated branch back to the remote repository. If you used rebase, you may need to force-push your changes.
 Command: git push (or git push --force if rebased)
 
--------------------Merging--------------------
+=>Merging
+
 10. Switch to the Master Branch:
 Use this command to switch to the master branch, where you want to merge your changes.
 Command: git checkout master
@@ -55,22 +58,24 @@ Command: git pull origin master
 
 12. Merge Your Feature Branch into Master:
 This command merges the changes from your feature branch into the master branch.
-Command: git merge <your-branch-name>
+Command: git merge your-branch-name
 
 13. Push the Updated Master to the Remote:
 After merging, you need to push the updated master branch back to the remote repository.
 Command: git push origin master
 
-14. Deleting
-Delete the Branch from the Remote:
+=>Deleting
+
+14.Delete the Branch from the Remote:
 If your feature branch is no longer needed, you can delete it from the remote repository.
-Command: git push origin --delete <your-branch-name>
+Command: git push origin --delete your-branch-name
 
 15. Delete the Local Branch:
 After deleting the branch from the remote, you can also delete your local branch to clean up your workspace.
-Command: git branch -d <your-branch-name>
+Command: git branch -d your-branch-name
 
--------------useful--------------------
+=>useful
+
 16. git branch -vv
 
 #feat-1
