@@ -75,4 +75,5 @@ After deleting the branch from the remote, you can also delete your local branch
 Command: git branch -d <your-branch-name>
 
 =>useful
+
 16. git branch -vv
