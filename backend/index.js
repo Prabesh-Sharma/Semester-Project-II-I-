@@ -8,6 +8,7 @@ import cors from "cors";//cors is implemented to verify if the origin making the
 import userRoute from "./src/routes/userRoute.js";
 import issueRoute from "./src/routes/issueRoute.js";
 import protect from "./src/middlewares/authorize.js";
+import districtRoute from "./src/routes/districtRoute.js"
 
 config();
 const app = express();
@@ -34,6 +35,7 @@ app.get("/", (req, res) => {
 //using the routes from the directory routes
 app.use("/api/user", userRoute);
 app.use("/api/issue", protect, issueRoute);
+app.use("/api",districtRoute);
 
 //initializing a server
 app.listen(process.env.PORT, () => {

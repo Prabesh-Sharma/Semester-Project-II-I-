@@ -1,17 +1,29 @@
 import Input from "./Input";
 import { useState } from "react";
+import {useNavigate} from "react-router-dom"
 
 const Form = () => {
-  const [signedIn, setSignedIn] = useState(true);
+  let [signedIn, setSignedIn] = useState(true);
   const [data, setData] = useState({
     ...(signedIn ? {} : { Email: "" }),
     Ctzno: "",
     Password: "",
-  }); 
+  });
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form submitted");
+    if(!signedIn){
+      setSignedIn(!signedIn)
+    }
+    else{
+    navigate('/home')}
+    setData(
+      {
+        Ctzno : "",
+        Password: "",
+      }      
+    )
   };
 
   console.log("data>>:", data);
@@ -36,9 +48,7 @@ const Form = () => {
               placeholder="Enter the email address"
               className="mb-4"
               value={data.Email}
-              onChange={(e) =>
-                setData({ ...data, Email: e.target.value })
-              }
+              onChange={(e) => setData({ ...data, Email: e.target.value })}
               required
             />
           )}
@@ -50,9 +60,7 @@ const Form = () => {
             placeholder="Enter Citizenship no."
             className="mb-4"
             value={data.Ctzno}
-            onChange={(e) =>
-              setData({ ...data, Ctzno: e.target.value })
-            }
+            onChange={(e) => setData({ ...data, Ctzno: e.target.value })}
             required
           />
 
@@ -63,30 +71,27 @@ const Form = () => {
             placeholder="Enter Password"
             className="mb-4"
             value={data.Password}
-            onChange={(e) =>
-              setData({ ...data, Password: e.target.value })
-            }
+            onChange={(e) => setData({ ...data, Password: e.target.value })}
             required
           />
 
           <div className="flex items-center justify-center flex-col">
-    
-          <button
-            className="bg-blue-800 text-white w-[100px] p-2.5 rounded-lg 
+            <button
+              className="bg-blue-800 text-white w-[100px] p-2.5 rounded-lg 
             hover:bg-blue-500 focus:outline-none focus:ring-blue-300 font-medium text-sm"
-            type="submit"
-          >
-            {signedIn ? "log in" : "sign up"}
-          </button>
-          <div>
-            {signedIn ? "Don't have an account?" : "Already have an account?"}
-            <span
-              className="mx-2 my-2 text-blue-400 cursor-pointer underline"
-              onClick={() => setSignedIn(!signedIn)}
+              type="submit"
             >
-              {signedIn ? "sign up" : "sign in"}
-            </span>
-          </div>
+              {signedIn ? "log in" : "sign up"}
+            </button>
+            <div>
+              {signedIn ? "Don't have an account?" : "Already have an account?"}
+              <span
+                className="mx-2 my-2 text-blue-400 cursor-pointer underline"
+                onClick={() => setSignedIn(!signedIn)}
+              >
+                {signedIn ? "sign up" : "sign in"}
+              </span>
+            </div>
           </div>
         </form>
       </div>
